@@ -7,7 +7,7 @@ int main()
 	int array[4][4];
     char str[20];
     char x;
-    int a,z=1,rows,columns,move=4,temp;
+    int a,z=1,rows,columns,move=10,temp;
     int random,i,p,q;
     int randvalues[16],m=0;
     int t,j;
@@ -41,9 +41,8 @@ int main()
 	printf("Enter any to key to start.....");
 	getch();
 	system("cls");
-	printf(" Hello ");
-	puts(str);
-	printf("\nMove remaining: %d\n\n",move);
+	printf(" Hello %s, ",str);
+    printf("Move remaining: %d\n\n",move);
 
         printf("\n---------------------\n");
     srand((unsigned)time(NULL));
@@ -92,7 +91,6 @@ int main()
  while(1)
    {
     x=getch();
-    //printf("%d",x);
     if(x==69||x==101)
         exit(0);
     if(x==75)
@@ -166,5 +164,8 @@ int main()
           }
     }
   }
+  if(array[rows][columns]!=array[3][3])
+    printf("LOST, You are out of move");
 }
+
 
