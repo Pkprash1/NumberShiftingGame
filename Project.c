@@ -41,7 +41,7 @@ int main()
 	printf("Enter any to key to start.....");
 	getch();
 	system("cls");
-	printf(" Hello %s, ",str);
+	printf(" Player name: %s, ",str);
     printf("Move remaining: %d\n\n",move);
 
         printf("\n---------------------\n");
@@ -75,7 +75,7 @@ int main()
     printf("-------------------\n");
     getch();
     	system("cls");
-  for(a=1;a<=move;a++)
+  for(a=move-1;a>=1;a--)
   {
     for(rows=0;rows<4;rows++)
     {
@@ -127,6 +127,8 @@ int main()
      else
         break;
    }
+   printf(" Player name: %s, ",str);
+    printf("Move remaining: %d\n\n",a);
     printf("\n------------------------\n");
    for(rows=0;rows<4;rows++) //conversion from 1-D to 2-D array and printning
     {
@@ -167,5 +169,3 @@ int main()
   if(array[rows][columns]!=array[3][3])
     printf("LOST, You are out of move");
 }
-
-
